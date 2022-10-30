@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'roboto', sans-serif;
+        }
+
+        #side-nav {
+            top: 60px;
+            max-width: 250px;
+            width: 200px;
+            display: block;
+
+        }
+
+
+        #opening-side a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #242424;
+
+
+        }
+
+        #opening-side a:hover,
+        #opening-side .active {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #opening-side div {
+            height: 50px;
+        }
+
+        #opening-side div:nth-child(1) {
+            margin-top: 10px
+        }
+
+        #opening-side div:nth-child(2) {
+            margin-top: 5px;
+        }
+
+        #opening-side div:nth-child(3) {
+            margin-top: 5px;
+        }
+
+        #opening-side div:nth-child(5) {
+            margin-top: 5px;
+        }
+
+        #opening-side div:nth-child(4) {
+            margin-top: 150px;
+        }
+
+        #opening-side img {
+            margin-right: 5px;
+        }
+
+
+        #closed-side {
+            display: none;
+            width: 100px;
+        }
+
+        #closed-side div {
+            text-align: center;
+        }
+
+        #closed-side img {
+            text-align: center;
+        }
+
+        #closed-side a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: #242424;
+        }
+
+        #closed-side div {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        #closed-side div:nth-child(1) {
+            margin-top: 10px
+        }
+
+        #closed-side div:nth-child(2) {
+            margin-top: 10px;
+        }
+
+        #closed-side div:nth-child(3) {
+            margin-top: 10px;
+        }
+
+        #closed-side div:nth-child(5) {
+            margin-top: 10px;
+        }
+
+        #closed-side div:nth-child(4) {
+            margin-top: 150px;
+        }
+
+        #closed-side div:hover,
+        #closed-side .active {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #main {
+            background: #f0f0f0;
+            width: calc(100% - 200px);
+            margin-left: 200px;
+            margin-top: 60px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-gap: 20px 5px;
+            overflow-x: hidden;
+        }
+
+        .video {
+            min-height: 250px;
+            height: auto;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .content {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .channel-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .title {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .channel-name {
+            font-size: 14px;
+            margin: 2px 0;
+            color: #979797;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav position-fixed top-0 d-flex justify-content-between mt-2">
+        <div>
+            <i id="menu-bar" class="fa-solid fa-bars mx-3" style="font-size:32px;cursor: pointer;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </i>
+            <i class="fa fa-youtube-play" style="font-size:38px;color:red"></i>
+        </div>
+        <form class="w-50 text-center">
+            <div class=" d-inline mx-2">
+                <input class="w-75" type="text">
+            </div>
+            <div class=" d-inline">
+                <i class=" fa-solid fa-magnifying-glass" style="font-size: 24px;"></i>
+            </div>
+        </form>
+        <div class="mx-3">
+            panel
+        </div>
+    </nav>
+
+    <div id="side-nav" class=" position-fixed start-0">
+        <div id="opening-side">
+            <div>
+                <a href="" class="active"><img src="home.png" width="20px" alt=""> Home</a>
+            </div>
+            <div>
+                <a href=""><img src="compass.png" width="20px" alt=""> Trend</a>
+            </div>
+            <div>
+                <a href=""><img src="subscribe.png" width="20px" alt=""> Subscription</a>
+            </div>
+            <div>
+                <a href=""><img src="history.png" width="20px" alt=""> History</a>
+            </div>
+            <div>
+                <a href=""><img src="library.png" width="20px" alt="">Library</a>
+            </div>
+        </div>
+        <div id="closed-side">
+            <div class="active">
+                <img src="home.png" width="20px" alt="">
+                <a href=""> Home</a>
+            </div>
+            <div>
+                <img src="compass.png" width="20px" alt="">
+                <a href=""> Trend</a>
+            </div>
+            <div>
+                <img src="subscribe.png" width="20px" alt="">
+                <a href=""> Subscription</a>
+            </div>
+            <div>
+                <img src="history.png" width="20px" alt="">
+                <a href=""> History</a>
+            </div>
+            <div>
+                <img src="library.png" width="20px" alt="">
+                <a href="">Library</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div id="main">
+        <!-- <div class="video">
+            <img src="img/profile-pic.png" class="thumbnail" alt="">
+            <div class="content">
+                <img src="img/profile-pic.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">youtube clone 2021</h4>
+                    <p class="channel-name">modern web</p>
+                </div>
+            </div> -->
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/5d6e25e9b6.js" crossorigin="anonymous"></script>
+        <script>
+            $('#menu-bar').click(function (e) {
+                e.preventDefault();
+                $('#closed-side').toggle(10, function () {
+                    $('#side-nav').width('100px');
+                });
+                $('#opening-side').toggle(10, function () {
+                    $('#side-nav').width('200px');
+                });
+
+            });
+            let api_key = 'AIzaSyCyDZazpmZTfYo0LxW9zf82zANlYA2LyfM';
+            let video_http = "https://www.googleapis.com/youtube/v3/videos?";
+            let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
+
+            fetch(video_http + new URLSearchParams({
+                key:api_key,
+                part:'snippet',
+                chart:'mostPopular',
+                maxResults:50,
+                regionCode:'TR'
+            }))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                data.items.forEach(item => {
+                    getChannelIcon(item);
+                })
+            })
+            .catch(err=>console.log(err));
+
+            const getChannelIcon = (video_data) =>{
+                fetch(channel_http + new URLSearchParams({
+                    key:api_key,
+                    part:'snippet',
+                    id:video_data.snippet.channelId
+                }))
+                .then(res => res.json())
+                .then(data =>{
+                    video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
+                    makeVideoCard(video_data);
+                    console.log(video_data);
+                })
+            }
+
+            const videoCardContainer = document.querySelector('#main');
+            const makeVideoCard = (data)=>{
+                videoCardContainer.innerHTML +=  `
+    <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
+        <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
+        <div class="content">
+            <img src="${data.channelThumbnail}" class="channel-icon" alt="">
+            <div class="info">
+                <h4 class="title">${data.snippet.title}</h4>
+                <p class="channel-name">${data.snippet.channelTitle}</p>
+            </div>
+        </div>
+    </div>
+    `;
+            }
+        </script>
+</body>
+
+</html>
